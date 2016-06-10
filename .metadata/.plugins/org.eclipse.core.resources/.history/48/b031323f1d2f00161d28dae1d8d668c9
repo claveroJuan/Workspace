@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package cl.curso.java.PatronBuilder;
+
+/**
+ * @author JuanClavero
+ *
+ */
+public class BuilderAuroTesla extends BuilderAuto {
+public BuilderAuroTesla() {
+	// TODO Auto-generated constructor stub
+}
+}

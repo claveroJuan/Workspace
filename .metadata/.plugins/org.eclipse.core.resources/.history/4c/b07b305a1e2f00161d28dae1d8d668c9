@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package cl.curso.java.PatronBuilder;
+
+/**
+ * @author JuanClavero
+ *
+ */
+public abstract class BuilderAuto {
+
+	public void construir() {
+
+	}
+	public BuilderAuto() {
+		// TODO Auto-generated constructor stub
+	}
+}

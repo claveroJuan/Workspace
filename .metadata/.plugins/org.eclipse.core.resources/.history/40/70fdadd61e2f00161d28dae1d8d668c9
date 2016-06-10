@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+package cl.curso.java.PatronBuilder;
+
+/**
+ * @author JuanClavero
+ *
+ */
+public class Motor {
+
+	private  int caballoFuerza;
+	public Motor() {
+		// TODO Auto-generated constructor stub
+	}
+}

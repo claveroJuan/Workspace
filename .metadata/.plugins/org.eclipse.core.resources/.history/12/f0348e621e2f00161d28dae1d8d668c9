@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package cl.curso.java.PatronBuilder;
+
+/**
+ * @author JuanClavero
+ *
+ */
+public class BuilderAutoToyota extends BuilderAuto {
+
+	public BuilderAutoToyota() {
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public void construir() {
+		// TODO Auto-generated method stub
+		super.construir();
+	}
+}

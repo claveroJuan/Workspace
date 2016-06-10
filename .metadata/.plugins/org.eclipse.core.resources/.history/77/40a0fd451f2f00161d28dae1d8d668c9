@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+package cl.curso.java.PatronBuilder;
+
+import java.util.ArrayList;
+
+/**
+ * @author JuanClavero
+ *
+ */
+public class Auto {
+
+	private String marca;
+	private String modelo;
+	private Gps GPS;
+	private Motor motor;
+	ArrayList<Integer>ruedas;
+	public Auto() {
+		// TODO Auto-generated constructor stub
+	}
+}

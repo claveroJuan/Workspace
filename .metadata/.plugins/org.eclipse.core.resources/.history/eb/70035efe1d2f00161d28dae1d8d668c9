@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package cl.curso.java.PatronBuilder;
+
+/**
+ * @author JuanClavero
+ *
+ */
+public class Gps {
+
+	public Gps() {
+		// TODO Auto-generated constructor stub
+	}
+}

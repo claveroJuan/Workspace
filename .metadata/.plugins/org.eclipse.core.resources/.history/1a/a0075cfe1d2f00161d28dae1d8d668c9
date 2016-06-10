@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package cl.curso.java.PatronBuilder;
+
+/**
+ * @author JuanClavero
+ *
+ */
+public class Director {
+
+	public Director() {
+		// TODO Auto-generated constructor stub
+	}
+}
