@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package conexionBaseDatos;
+
+import conexionBaseDatos.Usuario;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+/**
+ * @author JuanClavero
+ *
+ */
+public class UsuarioDAO {
+	public static void validar(Usuario usuario) {
+		Conexion con = Conexion.getInstancia();
+		PreparedStatement st = con.getConnection()
+				.prepareStatement("select * from usuarios where" + "nombre_usuario=? AND " + "password =?;");
+		st.setString(1, getUsuario());
+		st.setString(2, getPassword());
+
+		ResultSet rs= st.executeQuery();
+		return rs.next();
+	}
+}

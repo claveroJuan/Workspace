@@ -1,0 +1,38 @@
+/**
+ * 
+ */
+package playlist;
+
+import java.util.ArrayList;
+
+/**
+ * @author JuanClavero
+ *
+ */
+public class Programa {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Cancion cancion1 = new Cancion("juanes", "JClavero", 4);
+		Cancion cancion2 = new Cancion("rapSolo", "JClavero", 4);
+		Cancion cancion3 = new Cancion("unDiaEnElBarrio", "JClavero", 3);
+		Cancion cancion4 = new Cancion("matarratas", "JClavero", 6);
+		Cancion cancion5 = new Cancion("javaMix", "JClavero", 5);
+		ArrayList<PlayList> list = new ArrayList<>(5);
+		ArrayList<Cancion> canciones = new ArrayList<>();
+		canciones.add(cancion1);
+		canciones.add(cancion2);
+		canciones.add(cancion3);
+		canciones.add(cancion4);
+		PlayList playList = new PlayList();
+		playList.setCanciones(canciones);
+		//playList.agregarCancion(cancion5);
+		playList.imprimir();
+
+	}
+
+}

@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package conexionBaseDatos;
+
+/**
+ * @author JuanClavero
+ *
+ */
+public class Conexion {
+
+}

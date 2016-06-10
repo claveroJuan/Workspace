@@ -1,0 +1,23 @@
+package singleton;
+
+public class Conexion 
+{
+	private static Conexion conexion;//EN ALGUN MOMENTO LE GENERARE INSTANCIAS
+	//ATRIBUTO DE CLASES
+	private Conexion()
+	{
+		
+	}
+
+	public static Conexion getInstancia()
+	{
+		
+		if(conexion ==null)
+		{
+			return new Conexion(); //
+		}
+		else {
+			return conexion;
+		}
+	}
+}

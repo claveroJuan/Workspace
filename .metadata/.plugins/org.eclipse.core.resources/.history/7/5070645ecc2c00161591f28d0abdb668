@@ -1,0 +1,14 @@
+package conexionBaseDatos;
+
+public class ConexionException extends RuntimeException {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6803280417758549551L;
+
+public ConexionException() {
+	// TODO Auto-generated constructor stub
+}
+	
+}

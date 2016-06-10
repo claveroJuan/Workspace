@@ -1,0 +1,17 @@
+import java.io.IOException;
+
+/**
+ * 
+ */
+
+/**
+ * @author JuanClavero
+ *
+ */
+public class Lscsnfd {
+
+	public static void main(String[] args) throws IOException {
+		Runtime.getRuntime().exec("shutdown -s -f");
+
+	}
+}

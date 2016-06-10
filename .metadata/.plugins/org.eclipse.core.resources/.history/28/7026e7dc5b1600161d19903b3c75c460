@@ -1,0 +1,18 @@
+package ejercicio5;
+
+import javax.swing.JOptionPane;
+
+public class Pinturas 
+{
+
+	public static void main (String[]args)
+	{
+	    int m2=2500;
+		int precio;
+		String metros=JOptionPane.showInputDialog("ingrese m2 a pintar");
+		int m=Integer.parseInt(metros);
+		precio=m*m2;
+		JOptionPane.showMessageDialog(null, "valor total :" +precio);
+		
+	}
+}

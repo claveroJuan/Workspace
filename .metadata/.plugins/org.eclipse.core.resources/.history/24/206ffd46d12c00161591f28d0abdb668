@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package conexionBaseDatos;
+
+/**
+ * @author JuanClavero
+ *
+ */
+public class UsuarioDAO {
+	public static void validar(Usuario usuario) {
+		Conexion con=Conexion.getInstancia();
+
+	}
+}

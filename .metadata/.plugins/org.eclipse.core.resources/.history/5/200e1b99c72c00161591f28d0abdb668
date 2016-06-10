@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package conexionBaseDatos;
+
+/**
+ * @author JuanClavero
+ *
+ */
+public class Usuario {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
