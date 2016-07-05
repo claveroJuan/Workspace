@@ -1,7 +1,0 @@
-package conexionBaseDatos;
-
-public class ConexionException extends Runtime {
-public ConexionException() {
-	// TODO Auto-generated constructor stub
-}
-}

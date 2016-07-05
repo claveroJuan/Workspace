@@ -91,7 +91,8 @@ public class LoginGUI extends JFrame {
 				usuario.setPassword(password.getText());
 
 				try {
-					usuario.login();
+					//usuario.login();se cambia de usuario a usuarioFacade
+					UsarioFacade.login(usuario);
 					JOptionPane.showMessageDialog(null, "acceso correcto", "bien", JOptionPane.INFORMATION_MESSAGE);
 				} catch (AutenticacionException e1) {
 

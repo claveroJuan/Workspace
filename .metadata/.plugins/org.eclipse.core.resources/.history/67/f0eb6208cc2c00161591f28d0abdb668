@@ -1,5 +1,0 @@
-package conexionBaseDatos;
-
-public class ConexionException extends RuntimeException {
-
-}

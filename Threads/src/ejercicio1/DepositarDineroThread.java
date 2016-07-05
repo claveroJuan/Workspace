@@ -9,6 +9,10 @@ package ejercicio1;
  */
 public class DepositarDineroThread extends Thread {
 
+	/*
+	 * ojo en el constructor del hilo,
+	 * 
+	 */
 	CuentaBancaria cuentaBancaria;
 	public DepositarDineroThread(CuentaBancaria cuentaBancaria) {
 		// TODO Auto-generated constructor stub

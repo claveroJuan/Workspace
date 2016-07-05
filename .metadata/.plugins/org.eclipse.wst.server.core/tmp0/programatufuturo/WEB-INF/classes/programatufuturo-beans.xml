@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:jms="http://www.springframework.org/schema/jms" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	                    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd 
+	                    http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd
+	                    http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms-3.0.xsd">
+
+	<context:component-scan base-package="cl.kvz.concentrador.daoServices.core" />
+	<!-- <context:property-placeholder 
+		location="classpath:resources/programatufuturo-config.properties" /> -->
+		
+	<!-- <context:property-placeholder 
+		location="file:///u/data/banco-falabella/concentrador/config/concentrador-core.properties" /> -->
+
+	<!--<context:property-placeholder 
+		location="file:../concentrador/config/concentrador-core.properties" />-->
+
+
+
+	<bean id="configuracion" class="cl.jmaldonado.programa_tu_futuro.core.Configuracion" >
+		<property name="datos">
+			<map>
+				<entry key="urlConexion" value="jdbc:mysql://127.5.190.2:3306/programatufuturo" />
+				<entry key="nombreUsuario" value="adminiNNE8SV" />
+				<entry key="password" value="BJitaVUKhhHL" />
+			</map>
+		</property>
+	</bean>
+	
+	
+	
+	<bean id="usuarioDAODatabaseFactory" class="cl.jmaldonado.programa_tu_futuro.dao.UsuarioDAODatabaseFactory" >
+	</bean>
+	
+	<bean id="usuarioFacade" class="cl.jmaldonado.programa_tu_futuro.facade.UsuarioFacade" >
+		<property name="dao" ref="usuarioDAODatabaseFactory" />
+	</bean>
+
+
+<!-- 
+	<bean id="configuracion" class="cl.jmaldonado.programa_tu_futuro.core.Configuracion" >
+		<property name="datos">
+			<map>
+				<entry key="urlConexion" value="jdbc:mysql://localhost:3306/sonar_source" />
+				<entry key="nombreUsuario" value="sonar" />
+				<entry key="password" value="sonar" />
+			</map>
+		</property>
+	</bean>	
+	
+-->	
+</beans>

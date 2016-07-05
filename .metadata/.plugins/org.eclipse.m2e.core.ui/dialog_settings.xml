@@ -31,6 +31,20 @@
 		<list key="issueManagementUrl">
 		</list>
 	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\JuanClavero\Desktop\java\programa-tu-futuro-class-master"/>
+			<item value="C:\Users\JuanClavero\workspace\jbossews"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
 	<section name="MavenProjectWizardArchetypePage">
 		<item value="All Catalogs" key="catalog"/>
 		<list key="projectNameTemplate">
@@ -44,6 +58,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\JuanClavero\workspace\Observer\src\main\java\cl\curso\java\prueba_tres\Observer\SensorHumedad.java"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -56,12 +71,26 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="cl.curso.java.guia_13.Patrones"/>
+			<item value="cl.curso.java.prueba_tres.loggin_web_app"/>
+			<item value="cl.curso.java.prueba_tres.Observer"/>
+			<item value="cl.curso.java.prueba_tres.Decorador"/>
+			<item value="cl.curso.java.prueba_tres.jclavero"/>
+			<item value="cl.curso.java.PatronBuilder"/>
 			<item value="cl.curso.java.login_app"/>
 		</list>
 		<list key="groupId">
+			<item value="cl.curso.java.guia_13"/>
+			<item value="cl.curso.java.prueba_tres"/>
 			<item value="cl.curso.java"/>
 		</list>
 		<list key="artifactId">
+			<item value="Patrones"/>
+			<item value="loggin-web-app"/>
+			<item value="Observer"/>
+			<item value="Decorador"/>
+			<item value="jclavero"/>
+			<item value="PatronBuilder"/>
 			<item value="login-app"/>
 		</list>
 		<list key="projectNameTemplate">

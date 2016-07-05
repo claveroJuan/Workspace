@@ -30,7 +30,7 @@ public class Conexion {
 																														// a
 																														// bd
 				Conexion conexion = new Conexion();
-				conexion.setConnection(conn);
+				conexion.setConnection(conn);//settear el estado de connecion con la conexion establecida
 				_conexion = conexion;
 
 				// } catch (SQLException e) {

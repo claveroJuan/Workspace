@@ -22,4 +22,9 @@ public class UsuarioDAO {
 		ResultSet rs = st.executeQuery();
 		return rs.next();
 	}
+	public static void aumentarIntentosFallidos(Usuario usuario) throws CuentaBloqueadaException{
+		if (usuario.getIntentosFallidos() >= 3) {
+			throw new CuentaBloqueadaException("La cuenta ha sido bloqueada");//arrojar excepcion si se intenta realizar mas de 3 intentos
+		}
+	}
 }

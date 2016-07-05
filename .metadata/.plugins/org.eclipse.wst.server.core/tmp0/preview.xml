@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<server port="8080">
+  <module context="programatufuturo" name="programatufuturo" path="C:/Users/JuanClavero/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/programatufuturo" type="j2ee"/>
+</server>
