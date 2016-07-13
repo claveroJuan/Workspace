@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.mysql.jdbc.Connection"/>
 <fullyQualifiedTypeName name="com.mysql.jdbc.Statement"/>
 <fullyQualifiedTypeName name="java.sql.Statement"/>
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="AbstractFactory.UsuarioDAO"/>
 <fullyQualifiedTypeName name="Decorador.Arma"/>
 <fullyQualifiedTypeName name="Decorador.PistolaDecorador"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,42 @@
+/**
+ * 
+ */
+package trabajo;
+
+import javax.swing.JOptionPane;
+
+/**
+ * @author JuanClavero
+ *
+ */
+public class Pricipal {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String opc = JOptionPane.showInputDialog("ingreseuna opcion"
+				+ "1-ingresar numero a arreglo"
+				+ "2-ingresar numero a arreglo"
+				+ "3-ingresar numero a arreglo"
+				+ "4-ingresar numero a arreglo");
+
+		switch (opc){
+		
+		case "1": {
+			System.out.println("ingrese numero a arreglo");
+			break;
+		}
+		case "2": {
+			System.out.println("Mostrar el arreglo que se ingreso");
+			break;
+		}
+		case "3": {
+			System.out.println("Mostrar pares");
+			break;
+		}
+		}
+	}
+
+}
