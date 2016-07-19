@@ -1,0 +1,12 @@
+package cl.jclavero.java.rest;
+
+import javax.ws.rs.Path;
+
+@Path("usuarios")
+public class UsuarioRest {
+
+	public List<Usuario> getUsuarios(){
+		
+	}
+	
+}

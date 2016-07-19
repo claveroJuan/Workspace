@@ -1,0 +1,5 @@
+package cl.jclavero.java.core;
+
+public class Usuario {
+
+}

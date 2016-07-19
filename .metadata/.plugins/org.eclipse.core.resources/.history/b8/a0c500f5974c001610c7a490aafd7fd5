@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html ng-app="App" class="backend">
+<!-- START Head -->
+<head>
+<!-- START META SECTION -->
+<meta charset="utf-8">		
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Mteam</title>
+<meta name="author" content="Juan Clavero">
+<meta name="description" content="Programa mteam">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144"
+	href="../image/touch/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114"
+	href="../image/touch/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72"
+	href="../image/touch/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed"
+	href="../image/touch/apple-touch-icon-57x57-precomposed.png">
+<link rel="shortcut icon" href="../image/favicon.ico">
+<!--/ END META SECTION -->
+
+<!-- START STYLESHEETS -->
+<!-- Plugins stylesheet : optional -->
+<!--/ Plugins stylesheet : optional -->
+
+<!-- Application stylesheet : mandatory -->
+<link rel="stylesheet" href="../stylesheet/bootstrap.css">
+<link rel="stylesheet" href="../stylesheet/layout.css">
+<link rel="stylesheet" href="../stylesheet/uielement.css">
+<!--/ Application stylesheet -->
+
+<!-- Theme stylesheet : optional -->
+<!--/ Theme stylesheet : optional -->
+
+<!-- modernizr script -->
+<script type="text/javascript"
+	src="../plugins/modernizr/js/modernizr.js"></script>
+<!--/ modernizr script -->
+<!-- END STYLESHEETS -->
+</head>
+<!--/ END Head -->
+
+<!-- START Body -->
+<body>
+	<!-- START Template Header -->
+	<header id="header" class="navbar">
+		<!-- START navbar header -->
+		<div class="navbar-header">
+			<!-- Brand -->
+			<a class="navbar-brand" href="javascript:void(0);"> <span
+				class="logo-figure"></span> <span class="logo-text"></span>
+			</a>
+			<!--/ Brand -->
+		</div>
+		<!--/ END navbar header -->
+
+		<!-- START Toolbar -->
+		<div class="navbar-toolbar clearfix">
+			<!-- START Left nav -->
+			<ul class="nav navbar-nav navbar-left">
+				<!-- Sidebar shrink -->
+				<li class="hidden-xs hidden-sm"><a href="javascript:void(0);"
+					class="sidebar-minimize" data-toggle="minimize"
+					title="Minimize sidebar"> <span class="meta"> <span
+							class="icon"></span>
+					</span>
+				</a></li>
+				<!--/ Sidebar shrink -->
+
+				<!-- Offcanvas left: This menu will take position at the top of template header (mobile only). Make sure that only #header have the `position: relative`, or it may cause unwanted behavior -->
+				<li class="navbar-main hidden-lg hidden-md hidden-sm"><a
+					href="javascript:void(0);" data-toggle="sidebar"
+					data-direction="ltr" rel="tooltip" title="Menu sidebar"> <span
+						class="meta"> <span class="icon"><i
+								class="ico-paragraph-justify3"></i></span>
+					</span>
+				</a></li>
+				<!--/ Offcanvas left -->
+				<!-- Notification dropdown -->
+				<li class="dropdown custom" id="header-dd-notification"><a
+					href="javascript:void(0);" class="dropdown-toggle"
+					data-toggle="dropdown"> <span class="meta"> <span
+							class="icon"><i class="ico-bell"></i></span> <span
+							class="hasnotification hasnotification-danger"></span>
+					</span>
+				</a> <!-- mustache template: used for update the `.media-list` requested from server-side -->
+					<script class="mustache-template" type="x-tmpl-mustache">
+                        
+                            {{#data}}
+                            <a href="javascript:void(0);" class="media border-dotted new">
+                                <span class="media-object pull-left">
+                                    <i class="{{icon}}"></i>
+                                </span>
+                                <span class="media-body">
+                                    <span class="media-text">{{{text}}}</span>
+                                    <span class="media-meta pull-right">{{meta.time}}</span>
+                                </span>
+                            </a>
+                            {{/data}}
+                        
+                        </script> <!--/ mustache template --> <!-- Dropdown menu -->
+					<div class="dropdown-menu" role="menu">
+						<div class="dropdown-header">
+							<span class="title">Notification <span class="count"></span></span>
+							<span class="option text-right"><a
+								href="javascript:void(0);">Clear all</a></span>
+						</div>
+						<div class="dropdown-body slimscroll">
+							<!-- indicator -->
+							<div class="indicator inline">
+								<span class="spinner spinner16"></span>
+							</div>
+							<!--/ indicator -->
+
+							<!-- Message list -->
+							<div class="media-list">
+								<a href="javascript:void(0);" class="media read border-dotted">
+									<span class="media-object pull-left"> <i
+										class="ico-basket2 bgcolor-info"></i>
+								</span> <span class="media-body"> <span class="media-text">Duis
+											aute irure dolor in <span class="text-primary semibold">reprehenderit</span>
+											in voluptate.
+									</span> <!-- meta icon --> <span class="media-meta pull-right">2d</span>
+										<!--/ meta icon -->
+								</span>
+								</a> <a href="javascript:void(0);" class="media read border-dotted">
+									<span class="media-object pull-left"> <i
+										class="ico-call-incoming"></i>
+								</span> <span class="media-body"> <span class="media-text">Aliquip
+											ex ea commodo consequat.</span> <!-- meta icon --> <span
+										class="media-meta pull-right">1w</span> <!--/ meta icon -->
+								</span>
+								</a> <a href="javascript:void(0);" class="media read border-dotted">
+									<span class="media-object pull-left"> <i
+										class="ico-alarm2"></i>
+								</span> <span class="media-body"> <span class="media-text">Excepteur
+											sint <span class="text-primary semibold">occaecat</span>
+											cupidatat non.
+									</span> <!-- meta icon --> <span class="media-meta pull-right">12w</span>
+										<!--/ meta icon -->
+								</span>
+								</a> <a href="javascript:void(0);" class="media read border-dotted">
+									<span class="media-object pull-left"> <i
+										class="ico-checkmark3 bgcolor-success"></i>
+								</span> <span class="media-body"> <span class="media-text">Lorem
+											ipsum dolor sit amet, <span class="text-primary semibold">consectetur</span>
+											adipisicing elit.
+									</span> <!-- meta icon --> <span class="media-meta pull-right">14w</span>
+										<!--/ meta icon -->
+								</span>
+								</a>
+							</div>
+							<!--/ Message list -->
+						</div>
+					</div> <!--/ Dropdown menu --></li>
+				<!--/ Notification dropdown -->
+
+			</ul>
+			<!--/ END Left nav -->
+
+			<!-- START navbar form -->
+			<div class="navbar-form navbar-left dropdown" id="dropdown-form">
+				<form action="" role="search">
+					<div class="has-icon">
+						<input type="text" class="form-control"
+							placeholder="Search application..."> <i
+							class="ico-search form-control-icon"></i>
+					</div>
+				</form>
+			</div>
+			<!-- START navbar form -->
+
+			<!-- START Right nav -->
+			<ul class="nav navbar-nav navbar-right">
+				<!-- Profile dropdown -->
+				<li class="dropdown profile"><a href="javascript:void(0);"
+					class="dropdown-toggle dropdown-hover" data-toggle="dropdown">
+						<span class="meta"> <span class="avatar"><img
+								src="../image/avatar/avatar7.jpg" class="img-circle" alt="" /></span>
+							<span class="text hidden-xs hidden-sm pl5">Juan Francisco</span>
+							<span class="caret"></span>
+					</span>
+				</a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="javascript:void(0);"><span class="icon"><i
+									class="ico-user-plus2"></i></span> My Accounts</a></li>
+						<li><a href="javascript:void(0);"><span class="icon"><i
+									class="ico-cog4"></i></span> Profile Setting</a></li>
+						<li><a href="javascript:void(0);"><span class="icon"><i
+									class="ico-question"></i></span> Help</a></li>
+						<li class="divider"></li>
+						<li><a href="javascript:void(0);"><span class="icon"><i
+									class="ico-exit"></i></span> Sign Out</a></li>
+					</ul></li>
+				<!-- Profile dropdown -->
+
+			</ul>
+			<!--/ END Right nav -->
+		</div>
+		<!--/ END Toolbar -->
+	</header>
+	<!--/ END Template Header -->
+
+	<!-- START Template Sidebar (Left) -->
+	<aside class="sidebar sidebar-left sidebar-menu">
+		<!-- START Sidebar Content -->
+		<section class="content slimscroll">
+			<h5 class="heading">Main Menu</h5>
+			<!-- START Template Navigation/Menu -->
+			<ul class="topmenu topmenu-responsive" data-toggle="menu">
+				<li><a href="javascript:void(0);" data-target="#dashboard"
+					data-toggle="submenu" data-parent=".topmenu"> <span
+						class="figure"><i class="ico-dashboard2"></i></span> <span
+						class="text">Inicio</span> <span class="arrow"></span>
+				</a> <!-- START 2nd Level Menu -->
+					<ul id="dashboard" class="submenu collapse ">
+						<li class="submenu-header ellipsis">Inicio</li>
+						<li><a href="#/usuario/lista"> <span class="text">Usuarios</span>
+						</a></li>
+						<li><a href="dashboard-v2.html"> <span class="text">Configuracion</span>
+						</a></li>
+					</ul> <!--/ END 2nd Level Menu --></li>
+
+			</ul>
+			<!--/ END Template Navigation/Menu -->
+		</section>
+		<!--/ END Sidebar Container -->
+	</aside>
+	<!--/ END Template Sidebar (Left) -->
+
+	<!-- START Template Sidebar (right) -->
+	<aside class="sidebar sidebar-right">
+		<!-- START Offcanvas -->
+		<div class="offcanvas-container" data-toggle="offcanvas"
+			data-options='{"openerClass":"offcanvas-opener", "closerClass":"offcanvas-closer"}'>
+			<!-- START Wrapper -->
+			<div class="offcanvas-wrapper">
+				<!-- Offcanvas Left -->
+				<div class="offcanvas-left">
+					<!-- Header -->
+					<div class="header pl0 pr0">
+						<ul class="list-table nm">
+							<li style="width: 50px; height: 34px;" class="text-center">
+								<a href="javascript:void(0);"
+								class="text-default offcanvas-closer"><i
+									class="ico-arrow-left6 fsize16"></i></a>
+							</li>
+							<li class="text-center">
+								<h5 class="semibold nm">Settings</h5>
+							</li>
+							<li style="width: 50px; height: 34px;" class="text-center">
+								<a href="javascript:void(0);" class="text-default"><i
+									class="ico-info22 fsize16"></i></a>
+							</li>
+						</ul>
+					</div>
+					<!--/ Header -->
+
+					<!-- Content -->
+					<div class="content slimscroll">
+						<h5 class="heading">News Feed</h5>
+						<ul class="topmenu">
+							<li><a href="javascript:void(0);"> <span class="figure"><i
+										class="ico-plus"></i></span> <span class="text">Add &amp;
+										Manage Source</span> <span class="arrow"></span>
+							</a></li>
+							<li><a href="javascript:void(0);"> <span class="figure"><i
+										class="ico-google-plus"></i></span> <span class="text">Google
+										Reader</span> <span class="arrow"></span>
+							</a></li>
+							<li><a href="javascript:void(0);"> <span class="figure"><i
+										class="ico-twitter2"></i></span> <span class="text">Twitter
+										Source</span> <span class="arrow"></span>
+							</a></li>
+						</ul>
+
+						<h5 class="heading">Friends</h5>
+						<ul class="topmenu">
+							<li><a href="javascript:void(0);"> <span class="figure"><i
+										class="ico-search22"></i></span> <span class="text">Find
+										Friends</span> <span class="arrow"></span>
+							</a></li>
+							<li><a href="javascript:void(0);"> <span class="figure"><i
+										class="ico-user-plus2"></i></span> <span class="text">Add
+										Friends</span> <span class="arrow"></span>
+							</a></li>
+						</ul>
+
+						<h5 class="heading">Account</h5>
+						<ul class="topmenu">
+							<li><a href="javascript:void(0);"> <span class="figure"><i
+										class="ico-user2"></i></span> <span class="text">Edit Account</span>
+									<span class="arrow"></span>
+							</a></li>
+							<li><a href="javascript:void(0);"> <span class="figure"><i
+										class="ico-envelop"></i></span> <span class="text">Manage
+										Subscription</span> <span class="arrow"></span>
+							</a></li>
+							<li><a href="javascript:void(0);"> <span class="figure"><i
+										class="ico-location6"></i></span> <span class="text">Location
+										Service</span> <span class="arrow"></span>
+							</a></li>
+							<li><a href="javascript:void(0);"> <span class="figure"><i
+										class="ico-switch"></i></span> <span class="text">Logout</span> <span
+									class="arrow"></span>
+							</a></li>
+							<li><a href="javascript:void(0);" class="text-danger"> <span
+									class="figure"><i class="ico-minus-circle2"></i></span> <span
+									class="text">Deactivate</span> <span class="arrow"></span>
+							</a></li>
+						</ul>
+					</div>
+					<!--/ Content -->
+				</div>
+				<!--/ Offcanvas Left -->
+
+				<!-- Offcanvas Right -->
+				<div class="offcanvas-right">
+					<!-- Header -->
+					<div class="header pl0 pr0">
+						<ul class="list-table nm">
+							<li style="width: 50px; height: 34px;" class="text-center">
+								<a href="javascript:void(0);"
+								class="text-default offcanvas-closer"><i
+									class="ico-arrow-left6 fsize16"></i></a>
+							</li>
+							<li class="text-center">
+								<h5 class="semibold nm">Autumn Barker</h5>
+							</li>
+							<li style="width: 50px; height: 34px;" class="text-center">
+								<a href="javascript:void(0);" class="text-default"><i
+									class="ico-info22 fsize16"></i></a>
+							</li>
+						</ul>
+					</div>
+					<!--/ Header -->
+
+					<!-- Footer -->
+					<div class="footer">
+						<div class="has-icon">
+							<input type="text" class="form-control"
+								placeholder="Type message..."> <i
+								class="ico-paper-plane form-control-icon"></i>
+						</div>
+					</div>
+					<!--/ Footer -->
+
+					<!-- Content -->
+					<div class="content slimscroll">
+						<!-- START chat -->
+						<ul class="media-list media-list-bubble">
+							<li class="media media-right"><a href="javascript:void(0);"
+								class="media-object"> <img src="../image/avatar/avatar7.jpg"
+									class="img-circle" alt="">
+							</a>
+								<div class="media-body">
+									<p class="media-text">eros non enim commodo hendrerit.</p>
+									<span class="clearfix"></span>
+									<p class="media-text">Suspendisse dui.</p>
+									<span class="clearfix"></span>
+									<p class="media-text">eu nulla at</p>
+									<!-- meta -->
+									<span class="clearfix"></span>
+									<!-- important: clearing floated media text -->
+									<p class="media-meta">Sun, Mar 02</p>
+								</div></li>
+							<li class="media"><a href="javascript:void(0);"
+								class="media-object"> <img src="../image/avatar/avatar6.jpg"
+									class="img-circle" alt="">
+							</a>
+								<div class="media-body">
+									<p class="media-text">Etiam laoreet, libero et tristique
+										pellentesque, tellus sem mollis dui, in sodales elit erat.</p>
+									<span class="clearfix"></span>
+									<p class="media-text">faucibus ut, nulla. Cras eu tellus</p>
+									<!-- meta -->
+									<span class="clearfix"></span>
+									<!-- important: clearing floated media text -->
+									<p class="media-meta">Tue, Oct 01</p>
+								</div></li>
+							<li class="media media-right"><a href="javascript:void(0);"
+								class="media-object"> <img src="../image/avatar/avatar7.jpg"
+									class="img-circle" alt="">
+							</a>
+								<div class="media-body">
+									<p class="media-text">Duis a mi fringilla mi lacinia
+										mattis. Integer</p>
+									<!-- meta -->
+									<span class="clearfix"></span>
+									<!-- important: clearing floated media text -->
+									<p class="media-meta">Fri, Sep 27</p>
+								</div></li>
+							<li class="media"><a href="javascript:void(0);"
+								class="media-object"> <img src="../image/avatar/avatar6.jpg"
+									class="img-circle" alt="">
+							</a>
+								<div class="media-body">
+									<p class="media-text">Praesent interdum ligula eu enim.
+										Etiam imperdiet dictum magna.</p>
+									<!-- meta -->
+									<span class="clearfix"></span>
+									<!-- important: clearing floated media text -->
+									<p class="media-meta">Wed, Aug 28</p>
+								</div></li>
+							<li class="media media-right"><a href="javascript:void(0);"
+								class="media-object"> <img src="../image/avatar/avatar7.jpg"
+									class="img-circle" alt="">
+							</a>
+								<div class="media-body">
+									<p class="media-text">Aliquam rutrum lorem ac risus. Morbi
+										metus. Vivamus euismod urna.</p>
+									<!-- meta -->
+									<span class="clearfix"></span>
+									<!-- important: clearing floated media text -->
+									<p class="media-meta">Sat, Sep 27</p>
+								</div></li>
+							<li class="media"><a href="javascript:void(0);"
+								class="media-object"> <img src="../image/avatar/avatar6.jpg"
+									class="img-circle" alt="">
+							</a>
+								<div class="media-body">
+									<p class="media-text">Vestibulum accumsan neque et nunc.
+										Quisque ornare tortor at risus. Nunc ac</p>
+									<span class="clearfix"></span>
+									<p class="media-text">Nam porttitor scelerisque neque</p>
+									<!-- meta -->
+									<span class="clearfix"></span>
+									<!-- important: clearing floated media text -->
+									<p class="media-meta">Sun, Feb 22</p>
+								</div></li>
+						</ul>
+						<!--/ END chat -->
+					</div>
+					<!--/ Content -->
+				</div>
+				<!--/ Offcanvas Right -->
+			</div>
+			<!--/ END Wrapper -->
+		</div>
+		<!--/ END Offcanvas -->
+	</aside>
+	<!--/ END Template Sidebar (right) -->
+
+	<!-- START Template Main -->
+	<section id="main" role="main">
+		<div ng-view></div>
+		<a href="#" class="totop animation" data-toggle="waypoints totop"
+			data-showanim="bounceIn" data-hideanim="bounceOut" data-offset="50%"><i
+			class="ico-angle-up"></i></a>
+	</section>
+	<!--/ END Template Main -->
+
+	<!-- START JAVASCRIPT SECTION (Load javascripts at bottom to reduce load time) -->
+	<!-- Application and vendor script : mandatory -->
+
+	<script type="text/javascript" src="../javascript/angular.min.js"></script>
+	<script type="text/javascript"
+		src="../javascript/angular-resource.min.js"></script>
+	<script type="text/javascript" src="../javascript/angular-route.min.js"></script>
+
+
+	<script type="text/javascript" src="../javascript/vendor.js"></script>
+	<script type="text/javascript" src="../javascript/core.js"></script>
+	<script type="text/javascript" src="../javascript/backend/app.js"></script>
+
+
+	<script type="text/javascript" src="../javascript/Aplicacion.js"></script>
+	<script type="text/javascript" src="../js/DashboardController.js"></script>
+	<script type="text/javascript"
+		src="../javascript/controladores/UsuarioController.js"></script>
+	<!--/ Application and vendor script : mandatory -->
+
+	<!-- Plugins and page level script : optional -->
+	<!--/ Plugins and page level script : optional -->
+	<!--/ END JAVASCRIPT SECTION -->
+</body>
+<!--/ END Body -->
+</html>

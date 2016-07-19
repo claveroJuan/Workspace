@@ -1,0 +1,5 @@
+package cl.jclavero.java.rest;
+
+public class UsuarioRest {
+
+}

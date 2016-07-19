@@ -1,0 +1,47 @@
+package cl.jclavero.java.core;
+
+public class Usuario {
+
+	private String nombre;
+	private String password;
+	
+	public Usuario(){
+		
+	}
+
+	/**
+	 * @return the nombre
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+
+	/**
+	 * @param nombre the nombre to set
+	 */
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	/**
+	 * @return the password
+	 */
+	public String getPassword() {
+		return password;
+	}
+
+	/**
+	 * @param password the password to set
+	 */
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		if(obj instanceof Usuario){
+			return ((Usuario)obj).getNombre().equals(this.getNombre());
+		}
+		return super.equals(obj);
+	}
+}

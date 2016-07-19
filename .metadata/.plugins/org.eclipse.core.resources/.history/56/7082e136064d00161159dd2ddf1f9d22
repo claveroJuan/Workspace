@@ -1,0 +1,54 @@
+package cl.jclavero.java.rest;
+
+import java.util.List;
+
+import javax.ws.rs.DELETE;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import cl.jclavero.java.core.Usuario;
+
+@Path("usuarios")
+public class UsuarioRest<Usuario> {
+
+	public List<Usuario> getUsuarios(){
+		return null;
+		
+	}
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+		public List<Usuario> getUsuario(){
+			return null;
+			
+		}
+	@GET
+	@Path ("/nombreUsuario")
+	@Produces(MediaType.APPLICATION_JSON)
+	    public Usuario getUsuario( @ PathParam("/nombreUsuario")String nombreUsuario){
+	    	return null;
+	    }
+	@DELETE
+	@Path ("/nombreUsuario")
+	@Produces(MediaType.APPLICATION_JSON)
+	     public  void eliminarUsuario(@ PathParam("/nombreUsuario")String nombreUsuario){
+		
+	}
+	@PUT
+
+	@Produces(MediaType.APPLICATION_JSON)
+	     public  void crearUsuario(Usuario usuario){
+		
+	}
+	@POST
+
+	@Produces(MediaType.APPLICATION_JSON)
+	     public  void actualizarUsuario(Usuario usuario){
+		
+	}
+
+}

@@ -1,0 +1,66 @@
+package cl.jclavero.java.core;
+
+import java.util.List;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+public class Usuario {
+
+	private String nombre;
+	private String password;
+	
+	public Usuario(){
+		
+	}
+@GET
+@Produces(MediaType.APPLICATION_JSON)
+	public List<Usuario> getUsuario(){
+		return null;
+		
+	}
+@GET
+@Path ("/nombreUsuario")
+@Produces(MediaType.APPLICATION_JSON)
+    public Usuario getUsuario( @ PathParam("/nombreUsuario")String nombreUsuario){
+    	return null;
+    }
+	/**
+	 * @return the nombre
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+
+	/**
+	 * @param nombre the nombre to set
+	 */
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	/**
+	 * @return the password
+	 */
+	public String getPassword() {
+		return password;
+	}
+
+	/**
+	 * @param password the password to set
+	 */
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		if(obj instanceof Usuario){
+			return ((Usuario)obj).getNombre().equals(this.getNombre());
+		}
+		return super.equals(obj);
+	}
+}
